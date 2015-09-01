@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.opengl1.MainActivity" >
+
+    <com.example.dat1.MyDrawView
+        android:id="@+id/drawLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/relative_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ZoomControls
+                android:id="@+id/zoomControlsRotateZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+            <ZoomControls
+                android:id="@+id/zoomControlsRotateY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsRotateZ" />
+
+            <ZoomControls
+                android:id="@+id/zoomControlsRotateX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsRotateY" />
+
+            <TextView
+                android:id="@+id/text_view_rotate_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsRotateX"
+                android:text="X" />
+
+            <TextView
+                android:id="@+id/text_view_rotate_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsRotateY"
+                android:text="Y" />
+
+            <TextView
+                android:id="@+id/text_view_rotate_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsRotateZ"
+                android:text="Z" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ZoomControls
+                android:id="@+id/zoomControlsZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" />
+
+            <ZoomControls
+                android:id="@+id/zoomControlsY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsZ"
+                android:layout_alignParentRight="true" />
+
+            <ZoomControls
+                android:id="@+id/zoomControlsX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsY"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/text_view_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsX"
+                android:text="X" />
+
+            <TextView
+                android:id="@+id/text_view_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsY"
+                android:text="Y" />
+
+            <TextView
+                android:id="@+id/text_view_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomControlsZ"
+                android:text="Z" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ZoomControls
+                android:id="@+id/zoomScalePlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/text_view_scale_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/zoomScalePlus"
+                android:layout_centerHorizontal="true"
+                android:text="Отдалить/приблизить" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout><!-- From: file:/home/sergey/ComputerGraphic/app/src/main/res/layout/activity_main.xml -->
